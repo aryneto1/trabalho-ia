@@ -153,8 +153,8 @@ bool found_in_stack(int matriz[N][N], stack<Npuzzle> stack) {
 void backtracking(Npuzzle npuzzle, int posInicialX, int posInicialY, int n, int depth) {
 
     //baixo, direita baixo, esquerda baixo, direita, esquerda, cima, cima direita, cima esquerda
-    int moveX[8] = {1,1,1,0,0,-1,-1,-1};
-    int moveY[8] = {0,1,-1,1,-1,0,1,-1};
+    int moveX[8] = {1,0,0,-1};
+    int moveY[8] = {0,1,-1,0};
     int temp, proximoX, proximoY;
 
     int posX = findXPosition(npuzzle.matriz);
@@ -177,16 +177,16 @@ void backtracking(Npuzzle npuzzle, int posInicialX, int posInicialY, int n, int 
         return;
     }
 
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 4; i++) {
         proximoX = posX + moveX[i];
         proximoY = posY + moveY[i];
         if(isSafe(proximoX, proximoY)) {
             depth++;
             npuzzle.nosExpBacktracking++;
+            backtracking(npuzzle, proximoX, proximoY, n+1, depth);
             if(isSolution(npuzzle.matriz)) {
                 return;
             }
-            backtracking(npuzzle, proximoX, proximoY, n+1, depth);
         }
     }
 
@@ -677,11 +677,11 @@ void aEstrela(Npuzzle npuzzle) {
 int main() {
     clock_t time;
 
-    int matriz[N][N] =
+    /*int matriz[N][N] =
             {1, 8, 2,
              0, 4, 3,
              7, 6, 5
-            };
+            };*/
 
     /*int matriz[N][N] =
             {0, 1, 3,
@@ -689,11 +689,11 @@ int main() {
              7, 8, 6
             };*/
 
-    /*int matriz[N][N] =
+    int matriz[N][N] =
             {1, 0, 3,
              4, 2, 5,
              7, 8, 6
-            };*/
+            };
 
     /*int matriz[N][N] =
             {1, 2, 3,
@@ -726,7 +726,7 @@ int main() {
     time = clock();
     backtracking(npuzzle, posX, posY, 0, 0);
     time = clock() - time;
-    cout << "tempo = " << ((float)time)/CLOCKS_PER_SEC << " segundos" <<endl;
+    cout << "tempo = " << time << "ms ou " << ((float)time)/CLOCKS_PER_SEC << " segundos" <<endl;
 
     cout << "SOLUCOES DOS OUTROS ALGORITMOS: " << endl;
 
