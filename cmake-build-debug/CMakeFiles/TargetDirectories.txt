@@ -1,0 +1,3 @@
+C:/Users/Ary Neto/Documents/prog/trabalho-ia/cmake-build-debug/CMakeFiles/trabalho_ia.dir
+C:/Users/Ary Neto/Documents/prog/trabalho-ia/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Ary Neto/Documents/prog/trabalho-ia/cmake-build-debug/CMakeFiles/rebuild_cache.dir
