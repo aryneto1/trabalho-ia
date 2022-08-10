@@ -234,7 +234,7 @@ void buscaLargura(Npuzzle npuzzle) {
                 cout << "profundidade: " << estado.depth << endl;
                 cout << "nos expandidos: " << nosExp << endl;
                 cout << "nos visitados: " << nosVis << endl;
-                cout << "custo: nao calculado"  << endl;
+                //cout << "custo: nao calculado"  << endl;
                 //cout << "fator de ramificacao medio: " << nosExp/mediaFilhos << endl;
                 sucesso = true;
             }
@@ -307,7 +307,7 @@ void buscaProfundidade(Npuzzle npuzzle) {
                 cout << "profundidade: " << estado.depth << endl;
                 cout << "nos expandidos: " << nosExp << endl;
                 cout << "nos visitados: " << nosVis << endl;
-                cout << "custo: nao calculado"  << endl;
+                //cout << "custo: nao calculado"  << endl;
 
                 sucesso = true;
             }
