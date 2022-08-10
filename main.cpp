@@ -152,7 +152,7 @@ bool found_in_stack(int matriz[N][N], stack<Npuzzle> stack) {
 
 void backtracking(Npuzzle npuzzle, int posInicialX, int posInicialY, int n, int depth) {
 
-    //baixo, direita baixo, esquerda baixo, direita, esquerda, cima, cima direita, cima esquerda
+    //baixo, direita, esquerda, cima
     int moveX[8] = {1,0,0,-1};
     int moveY[8] = {0,1,-1,0};
     int temp, proximoX, proximoY;
@@ -677,25 +677,25 @@ void aEstrela(Npuzzle npuzzle) {
 int main() {
     clock_t time;
 
-    /*int matriz[N][N] =
+    int matriz[N][N] =
             {1, 8, 2,
              0, 4, 3,
              7, 6, 5
-            };*/
+            };
 
-    /*int matriz[N][N] =
+   /* int matriz[N][N] =
             {0, 1, 3,
              4, 2, 5,
              7, 8, 6
             };*/
 
-    int matriz[N][N] =
+    /*int matriz[N][N] =
             {1, 0, 3,
              4, 2, 5,
              7, 8, 6
-            };
+            };*/
 
-    /*int matriz[N][N] =
+   /*int matriz[N][N] =
             {1, 2, 3,
              0, 4, 6,
              7, 5, 8
