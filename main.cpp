@@ -1,7 +1,5 @@
 #include <iostream>
-#include <cstdio>
 #include <cstdlib>
-#include <cstring>
 #include <deque>
 #include <algorithm>
 #include <stack>
@@ -683,7 +681,7 @@ int main() {
              7, 6, 5
             };
 
-   /* int matriz[N][N] =
+    /*int matriz[N][N] =
             {0, 1, 3,
              4, 2, 5,
              7, 8, 6
